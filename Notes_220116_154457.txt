@@ -1,0 +1,8 @@
+Termux is able to catch several intents and execute shell scripts to act upon them:
+* Sharing single files with Termux.<br>Following handle will be executed:<code>~/bin/termux-file-editor</code>
+** Opening in your popular editor by using a symbolic link:<br><code>ln -s $PREFIX/bin/nvim ~/bin/termux-file-editor</code>
+** Creating a handle by creating a file and changing the access rights:
+**#<code>nano ~/bin/termux-file-editor</code>)
+**#<code>chmod +x ~/bin/termux-file-editor</code>)
+* URL sharing available in common apps (e.g. Youtube).<br>Following handle will be executed: <code>~/bin/termux-url-opener</code>
+** Sharing a URL to be downloaded.<br>You can handle incoming URL by editing the content. <br><code>yoursth-dl -f 'bestvideo[ext=mp4][height<=720]+bestaudio' --restrict-filenames -o '~/storage/downloads/%(title)s-%(id)s.%(ext)s' $1</code>
